@@ -26,11 +26,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     textAlign: "center",
   },
-  user_detail_sub: {
-    display: "flex",
-    flexWrap: "wrap",
-  },
-  user_info: {
+  user_detail: {
     marginTop: "10px",
     borderBottom: "1px solid #e6e6e6",
   },
@@ -67,19 +63,19 @@ export default function MediaCard() {
           <p>@{userDetail.username}</p>
         </Typography>
         <Typography variant="body2" component="div">
-          <Box fontSize="1rem" className={classes.user_info}>
+          <Box fontSize="1rem" className={classes.user_detail}>
             Email: <br /> {userDetail.email}{" "}
           </Box>
-          <Box fontSize="1rem" className={classes.user_info}>
+          <Box fontSize="1rem" className={classes.user_detail}>
             Phone: <br /> {userDetail.phone}{" "}
           </Box>
-          <Box fontSize="1rem" className={classes.user_info}>
+          <Box fontSize="1rem" className={classes.user_detail}>
             Company: <br /> {userDetail.company.name}
           </Box>
-          <Box fontSize="1rem" className={classes.user_info}>
+          <Box fontSize="1rem" className={classes.user_detail}>
             Website: <br /> <Link>{userDetail.website}</Link>
           </Box>
-          <Box fontSize="1rem" className={classes.user_info}>
+          <Box fontSize="1rem" className={classes.user_detail}>
             Address: <br />
             Street: {userDetail.address.street} <br />
             Suite: {userDetail.address.suite} <br />
