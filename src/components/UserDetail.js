@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import Box from "@material-ui/core/Box";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import Link from "@material-ui/core/Link";
+import {
+  Card,
+  CardContent,
+  Typography,
+  Avatar,
+  Link,
+  Box,
+} from "@material-ui/core";
 import { useParams } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
@@ -38,10 +40,6 @@ export default function MediaCard() {
   const { id } = useParams();
   const userDetail = users.find((user) => user.id === Number(id));
 
-  console.log(id);
-  console.log(users);
-  console.log(userDetail);
-
   return (
     <Card className={classes.root}>
       <Avatar className={classes.avatar}>{userDetail.name.charAt(0)}</Avatar>
@@ -64,16 +62,20 @@ export default function MediaCard() {
         </Typography>
         <Typography variant="body2" component="div">
           <Box fontSize="1rem" className={classes.user_detail}>
-            Email: <br /> {userDetail.email}{" "}
+            Email: <br />
+            {userDetail.email}
           </Box>
           <Box fontSize="1rem" className={classes.user_detail}>
-            Phone: <br /> {userDetail.phone}{" "}
+            Phone: <br />
+            {userDetail.phone}
           </Box>
           <Box fontSize="1rem" className={classes.user_detail}>
-            Company: <br /> {userDetail.company.name}
+            Company: <br />
+            {userDetail.company.name}
           </Box>
           <Box fontSize="1rem" className={classes.user_detail}>
-            Website: <br /> <Link>{userDetail.website}</Link>
+            Website: <br />
+            <Link>{userDetail.website}</Link>
           </Box>
           <Box fontSize="1rem" className={classes.user_detail}>
             Address: <br />

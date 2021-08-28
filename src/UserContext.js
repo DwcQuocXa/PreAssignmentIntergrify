@@ -7,10 +7,10 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const getUsers = async () => {
-      const usersInfo = await axios.get(
+      const response = await axios.get(
         "https://jsonplaceholder.typicode.com/users"
       );
-      setUsers(usersInfo.data);
+      setUsers(response.data);
     };
     getUsers();
   }, []);

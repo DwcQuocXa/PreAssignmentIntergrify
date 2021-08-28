@@ -1,17 +1,13 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Typography from "@material-ui/core/Typography";
-import Avatar from "@material-ui/core/Avatar";
-import Link from "@material-ui/core/Link";
+import { Card, CardContent, Typography, Avatar, Link } from "@material-ui/core";
 import DetailButton from "./DetailButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
     alignItems: "top",
-    padding: "10px",
+    padding: "12.3px",
     margin: "40px",
     textAlign: "center",
     width: theme.spacing(37),
